@@ -1,0 +1,29 @@
+' this program checks movement
+' with a pir controller and if detected
+' send alert to your phone
+
+io(po,D2,0)
+wprint "<h1>Movement detector</h1>"
+wprint "</br>"
+wprint "</br>"
+
+button "start", [click]
+wprint "><><><><><><"
+
+button "Exit", [progend] 
+wprint "</br>"
+wait
+
+[click]
+io(po,D2,0)
+do
+movement = io(pi,D3)
+loop until movement = 1
+io(po,D2,1)
+
+'print wget("maker.ifttt.com/trigger/Motion detected 2/with/key/btlHI07YkiOdBu6RZxdE66")
+print "alert"
+wait
+
+[progend] 
+end
