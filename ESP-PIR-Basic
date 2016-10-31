@@ -21,7 +21,7 @@ movement = io(pi,D3)
 loop until movement = 1
 io(po,D2,1)
 
-'print wget("maker.ifttt.com/trigger/Motion detected 2/with/key/btlHI07YkiOdBu6RZxdE66")
+'print wget("maker.ifttt.com/trigger/Motion detected 2/with/key/FILLINYOURMAKERKEY")
 print "alert"
 wait
 
